@@ -36,11 +36,17 @@
 | [排查目录索引](troubleshooting/README.md) | 索引 | 有效 | 长期可复现环境、构建与安全问题的排查记录 |
 | [0001-真机安装 Debug APK 报错与 Hermes 运行时排查](troubleshooting/0001-android-release-and-hermes-runtime.md) | 排查记录 | 已执行 | Debug APK 缺 JS Bundle、Hermes 缺 TextEncoder/TextDecoder 及 URL/fetch 兼容根因与修复 |
 
+### 文档视觉资源 (`docs/assets/`)
+
+- [hero-banner.svg](assets/hero-banner.svg)：README 顶部品牌横幅矢量图
+- [security-architecture.svg](assets/security-architecture.svg)：分层架构与 Android 硬件安全边界示意图
+- [ui-overview.svg](assets/ui-overview.svg)：核心界面布局结构矢量示意图
+
 ### 根目录核心文档
 
 - [AGENTS.md](../AGENTS.md)：项目级执行规则（Git、版本、Bun、安全约束）
 - [CHANGELOG.md](../CHANGELOG.md)：语义化版本变更日志
-- [DESIGN.md](../DESIGN.md)：视觉规范与双层设计令牌手册（随设计令牌生成后补充）
+- [DESIGN.md](../DESIGN.md)：视觉规范与双层设计令牌手册
 
 ## 文档规范
 

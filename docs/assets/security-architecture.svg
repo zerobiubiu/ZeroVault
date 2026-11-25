@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 440" width="1200" height="440" role="img" aria-label="ZeroVault Security and Layer Architecture">
+  <defs>
+    <linearGradient id="archBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E141C" />
+      <stop offset="100%" stop-color="#15202C" />
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#5CC3DF" />
+    </marker>
+  </defs>
+
+  <rect x="4" y="4" width="1192" height="432" rx="20" fill="url(#archBg)" stroke="#253445" stroke-width="1.5" />
+
+  <text x="36" y="48" fill="#F4FAFC" font-family="system-ui, -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="22" font-weight="700">
+    ZeroVault 分层架构与硬件安全边界
+  </text>
+  <text x="36" y="72" fill="#9CB3C5" font-family="system-ui, -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="13">
+    单向无环依赖 · UI 列表仅保存摘要 · 明文凭据绝不落盘 · 重算加密与生物解封全部下沉 Android 原生层
+  </text>
+
+  <!-- 左栏：UI 表现与状态协调 -->
+  <g transform="translate(36, 102)" font-family="system-ui, -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif">
+    <rect x="0" y="0" width="330" height="300" rx="16" fill="#182330" stroke="#2D4156" stroke-width="1.5" />
+    <rect x="0" y="0" width="330" height="44" rx="16" fill="#1D4B60" />
+    <rect x="0" y="28" width="330" height="16" fill="#1D4B60" />
+    <text x="20" y="28" fill="#F4FAFC" font-size="15" font-weight="700">表现层 · src/app &amp; src/theme</text>
+
+    <rect x="18" y="62" width="294" height="58" rx="10" fill="#213041" stroke="#31475E" stroke-width="1" />
+    <text x="32" y="85" fill="#E8F4FA" font-size="14" font-weight="600">8 大业务界面与异形屏适配</text>
+    <text x="32" y="106" fill="#9CB3C5" font-size="12">默认库启动自动解锁 · 42 组 WCAG 令牌</text>
+
+    <rect x="18" y="132" width="294" height="68" rx="10" fill="#213041" stroke="#31475E" stroke-width="1" />
+    <text x="32" y="155" fill="#E8F4FA" font-size="14" font-weight="600">VaultCoordinator 状态最小化</text>
+    <text x="32" y="176" fill="#9CB3C5" font-size="12">State 仅持 VaultEntrySummary 摘要</text>
+    <text x="32" y="192" fill="#7ACAE0" font-size="12">密码与受保护字段按需读取，20s 自动隐藏</text>
+
+    <rect x="18" y="212" width="294" height="68" rx="10" fill="#213041" stroke="#31475E" stroke-width="1" />
+    <text x="32" y="235" fill="#E8F4FA" font-size="14" font-weight="600">生成器与锁库守卫 · src/security</text>
+    <text x="32" y="256" fill="#9CB3C5" font-size="12">CSPRNG 拒绝采样密码 / 词组 / PIN</text>
+    <text x="32" y="272" fill="#9CB3C5" font-size="12">切后台超时自动锁库并清空 Autofill 缓存</text>
+  </g>
+
+  <!-- 中栏：核心协议与存储同步 -->
+  <g transform="translate(410, 102)" font-family="system-ui, -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif">
+    <rect x="0" y="0" width="350" height="300" rx="16" fill="#182330" stroke="#2D4156" stroke-width="1.5" />
+    <rect x="0" y="0" width="350" height="44" rx="16" fill="#1A5C75" />
+    <rect x="0" y="28" width="350" height="16" fill="#1A5C75" />
+    <text x="20" y="28" fill="#F4FAFC" font-size="15" font-weight="700">核心协议与同步 · src/kdbx &amp; src/storage</text>
+
+    <rect x="18" y="62" width="314" height="106" rx="10" fill="#213041" stroke="#35556D" stroke-width="1" />
+    <text x="32" y="85" fill="#E8F4FA" font-size="14" font-weight="600">自主 KDBX 3.1 / 4.0 / 4.1 引擎</text>
+    <text x="32" y="106" fill="#9CB3C5" font-size="12">· 严格区分空密码 "" 与无密码组件 null</text>
+    <text x="32" y="124" fill="#9CB3C5" font-size="12">· KeyFile XML v1/v2 / 32B / 64B Hex / 二进制</text>
+    <text x="32" y="142" fill="#9CB3C5" font-size="12">· HMAC 块校验 · 防 XXE · RFC 6238 TOTP</text>
+    <text x="32" y="160" fill="#7ACAE0" font-size="12">· 事务 fork() 回滚 · lock() 内存清零</text>
+
+    <rect x="18" y="180" width="314" height="100" rx="10" fill="#213041" stroke="#35556D" stroke-width="1" />
+    <text x="32" y="203" fill="#E8F4FA" font-size="14" font-weight="600">多库与 WebDAV 冲突状态机</text>
+    <text x="32" y="224" fill="#9CB3C5" font-size="12">· 本地 SAF 与 WebDAV 远程库 / 远程密钥</text>
+    <text x="32" y="242" fill="#9CB3C5" font-size="12">· PROPFIND 目录浏览 · 禁用跨源重定向</text>
+    <text x="32" y="260" fill="#7ACAE0" font-size="12">· 强 ETag If-Match + SHA-256 防静默覆盖</text>
+  </g>
+
+  <!-- 右栏：Android Kotlin 原生安全基座 -->
+  <g transform="translate(804, 102)" font-family="system-ui, -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif">
+    <rect x="0" y="0" width="360" height="300" rx="16" fill="#182330" stroke="#2D6A57" stroke-width="1.5" />
+    <rect x="0" y="0" width="360" height="44" rx="16" fill="#175B47" />
+    <rect x="0" y="28" width="360" height="16" fill="#175B47" />
+    <text x="20" y="28" fill="#F4FAFC" font-size="15" font-weight="700">Android 原生安全层 · Kotlin</text>
+
+    <rect x="18" y="62" width="324" height="50" rx="10" fill="#1C2E2C" stroke="#2B6756" stroke-width="1" />
+    <text x="32" y="83" fill="#E6FAF2" font-size="13" font-weight="600">BiometricKeystoreModule</text>
+    <text x="32" y="101" fill="#9FD3C1" font-size="11.5">StrongBox/TEE AES-256-GCM + CryptoObject</text>
+
+    <rect x="18" y="122" width="324" height="50" rx="10" fill="#1C2E2C" stroke="#2B6756" stroke-width="1" />
+    <text x="32" y="143" fill="#E6FAF2" font-size="13" font-weight="600">NativeCryptoModule</text>
+    <text x="32" y="161" fill="#9FD3C1" font-size="11.5">BouncyCastle Argon2 · AES · ChaCha20 · Twofish</text>
+
+    <rect x="18" y="182" width="324" height="50" rx="10" fill="#1C2E2C" stroke="#2B6756" stroke-width="1" />
+    <text x="32" y="203" fill="#E6FAF2" font-size="13" font-weight="600">WebDavNative &amp; SafStorage</text>
+    <text x="32" y="221" fill="#9FD3C1" font-size="11.5">OkHttp 禁重定向 · SAF · FLAG_SECURE · 剪贴板</text>
+
+    <rect x="18" y="242" width="324" height="44" rx="10" fill="#1C2E2C" stroke="#2B6756" stroke-width="1" />
+    <text x="32" y="262" fill="#E6FAF2" font-size="13" font-weight="600">ZeroVaultAutofillService</text>
+    <text x="32" y="278" fill="#9FD3C1" font-size="11.5">域名 / 包名匹配 · 锁定态生物认证引导</text>
+  </g>
+
+  <!-- 层间连接箭头 -->
+  <line x1="366" y1="220" x2="405" y2="220" stroke="#5CC3DF" stroke-width="2.2" marker-end="url(#arrow)" />
+  <line x1="760" y1="190" x2="799" y2="190" stroke="#5CC3DF" stroke-width="2.2" marker-end="url(#arrow)" />
+  <line x1="760" y1="295" x2="799" y2="295" stroke="#5CC3DF" stroke-width="2.2" marker-end="url(#arrow)" />
+</svg>

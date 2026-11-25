@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" width="1200" height="340" role="img" aria-label="ZeroVault - Android KDBX Password Manager">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B1E2B" />
+      <stop offset="55%" stop-color="#123A4E" />
+      <stop offset="100%" stop-color="#1B5D76" />
+    </linearGradient>
+    <radialGradient id="glow" cx="20%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#5CC3DF" stop-opacity="0.22" />
+      <stop offset="100%" stop-color="#0B1E2B" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="iconBg" cx="50%" cy="38%" r="72%">
+      <stop offset="0%" stop-color="#247C98" />
+      <stop offset="55%" stop-color="#14495E" />
+      <stop offset="100%" stop-color="#0C2230" />
+    </radialGradient>
+    <linearGradient id="gridLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#5CC3DF" stop-opacity="0" />
+      <stop offset="50%" stop-color="#5CC3DF" stop-opacity="0.16" />
+      <stop offset="100%" stop-color="#5CC3DF" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+
+  <!-- 圆角主画布 -->
+  <rect x="8" y="8" width="1184" height="324" rx="24" fill="url(#bgGrad)" stroke="#2A6D87" stroke-width="1.5" />
+  <rect x="8" y="8" width="1184" height="324" rx="24" fill="url(#glow)" />
+
+  <!-- 克制几何装饰线条 -->
+  <line x1="80" y1="68" x2="1120" y2="68" stroke="url(#gridLine)" stroke-width="1" />
+  <line x1="80" y1="272" x2="1120" y2="272" stroke="url(#gridLine)" stroke-width="1" />
+  <circle cx="1050" cy="170" r="118" fill="none" stroke="#5CC3DF" stroke-opacity="0.08" stroke-width="1.5" />
+  <circle cx="1050" cy="170" r="84" fill="none" stroke="#5CC3DF" stroke-opacity="0.1" stroke-width="1" />
+  <circle cx="1050" cy="170" r="50" fill="none" stroke="#5CC3DF" stroke-opacity="0.12" stroke-width="1" />
+
+  <!-- 左侧 ZeroVault 同源几何盾锁徽标 -->
+  <g transform="translate(86, 86)">
+    <rect x="0" y="0" width="168" height="168" rx="40" fill="url(#iconBg)" stroke="#3B93B0" stroke-width="2" />
+    <circle cx="84" cy="84" r="62" fill="none" stroke="#A8D8EA" stroke-opacity="0.22" stroke-width="1.5" />
+    <circle cx="84" cy="84" r="48" fill="none" stroke="#A8D8EA" stroke-opacity="0.16" stroke-width="1.2" />
+    <g transform="scale(1.5556)">
+      <path fill="#F4FAFC" d="M54,24 L76,33.2 C77.2,33.7 78,34.9 78,36.2 L78,53.5 C78,68.4 67.8,79.6 55.2,84.4 C54.4,84.7 53.6,84.7 52.8,84.4 C40.2,79.6 30,68.4 30,53.5 L30,36.2 C30,34.9 30.8,33.7 32,33.2 Z" />
+      <path fill="#113A4D" d="M54,30.2 L71.4,37.5 L71.4,53.2 C71.4,64.8 63.6,73.7 54,77.7 C44.4,73.7 36.6,64.8 36.6,53.2 L36.6,37.5 Z" />
+      <path fill="#5CC3DF" d="M43.5,42.5 L64.5,42.5 L64.5,47.5 L51.4,60.5 L64.5,60.5 L64.5,65.5 L43.5,65.5 L43.5,60.5 L56.6,47.5 L43.5,47.5 Z" />
+      <circle cx="54" cy="54" r="2.8" fill="#F4FAFC" />
+    </g>
+  </g>
+
+  <!-- 右侧标题与特性徽标 -->
+  <text x="296" y="142" fill="#F4FAFC" font-family="system-ui, -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="54" font-weight="700" letter-spacing="-0.5">
+    ZeroVault
+  </text>
+  <text x="298" y="184" fill="#CBEAF4" font-family="system-ui, -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="21" font-weight="400">
+    自主 KDBX 内核 · Android 硬件级生物识别 · WebDAV 远程库与远程密钥
+  </text>
+
+  <!-- 四枚特性胶囊 -->
+  <g transform="translate(298, 212)" font-family="system-ui, -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" font-weight="600">
+    <rect x="0" y="0" width="146" height="34" rx="17" fill="#174D64" stroke="#3D9AB7" stroke-width="1" />
+    <text x="73" y="22" text-anchor="middle" fill="#E8F8FC">KDBX 3.1 / 4.1</text>
+
+    <rect x="160" y="0" width="170" height="34" rx="17" fill="#174D64" stroke="#3D9AB7" stroke-width="1" />
+    <text x="245" y="22" text-anchor="middle" fill="#E8F8FC">StrongBox / TEE</text>
+
+    <rect x="344" y="0" width="184" height="34" rx="17" fill="#174D64" stroke="#3D9AB7" stroke-width="1" />
+    <text x="436" y="22" text-anchor="middle" fill="#E8F8FC">WebDAV + 远程密钥</text>
+
+    <rect x="542" y="0" width="154" height="34" rx="17" fill="#174D64" stroke="#3D9AB7" stroke-width="1" />
+    <text x="619" y="22" text-anchor="middle" fill="#E8F8FC">AutofillService</text>
+  </g>
+</svg>

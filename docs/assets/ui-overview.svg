@@ -1,0 +1,195 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 492" width="1200" height="492" role="img" aria-label="ZeroVault Core Screen Layout Overview">
+  <defs>
+    <linearGradient id="canvasBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D131B" />
+      <stop offset="100%" stop-color="#141F2B" />
+    </linearGradient>
+    <clipPath id="phoneInnerClip">
+      <rect x="2" y="2" width="248" height="342" rx="26" />
+    </clipPath>
+  </defs>
+
+  <rect x="4" y="4" width="1192" height="484" rx="20" fill="url(#canvasBg)" stroke="#243344" stroke-width="1.5" />
+
+  <text x="36" y="44" fill="#F4FAFC" font-family="system-ui, -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="20" font-weight="700">
+    核心界面结构示意（深色静谧金库蓝主题 · 异形屏安全区适配）
+  </text>
+  <text x="36" y="66" fill="#8EA6B8" font-family="system-ui, -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="12.5">
+    说明：以下为依据项目 design-tokens.json 与界面结构绘制的矢量布局图（不含真实账户数据）
+  </text>
+
+  <!-- 手机 1：启动自动解锁 -->
+  <g transform="translate(38, 88)" font-family="system-ui, -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif">
+    <rect x="0" y="0" width="252" height="346" rx="28" fill="#0E1218" stroke="#354A60" stroke-width="2.5" />
+    <g clip-path="url(#phoneInnerClip)">
+      <!-- 挖孔摄像头示意 -->
+      <circle cx="126" cy="14" r="4.5" fill="#233142" />
+      <!-- 顶部品牌栏 -->
+      <rect x="16" y="34" width="24" height="24" rx="6" fill="#14495E" stroke="#3B93B0" stroke-width="1" />
+      <text x="28" y="51" text-anchor="middle" fill="#5CC3DF" font-size="13" font-weight="700">Z</text>
+      <text x="48" y="51" fill="#F4FAFC" font-size="14" font-weight="700">ZeroVault</text>
+      <text x="234" y="50" text-anchor="end" fill="#5CC3DF" font-size="11" font-weight="600">+ 添加</text>
+
+      <!-- 默认库卡片 -->
+      <rect x="14" y="72" width="224" height="74" rx="12" fill="#161C24" />
+      <rect x="14" y="72" width="4" height="74" rx="2" fill="#4BA8C4" />
+      <text x="28" y="95" fill="#F4FAFC" font-size="13" font-weight="600">Personal Vault</text>
+      <rect x="180" y="82" width="48" height="18" rx="9" fill="#142C45" />
+      <text x="204" y="94" text-anchor="middle" fill="#9BC6F5" font-size="9.5" font-weight="600">WebDAV</text>
+      <text x="28" y="113" fill="#8EA6B8" font-size="10">https://dav.example.com/vault.kdbx</text>
+      <rect x="28" y="122" width="38" height="16" rx="8" fill="#133341" />
+      <text x="47" y="133" text-anchor="middle" fill="#9EDDF0" font-size="9">默认</text>
+      <rect x="72" y="122" width="64" height="16" rx="8" fill="#12342A" />
+      <text x="104" y="133" text-anchor="middle" fill="#8EE3C3" font-size="9">StrongBox</text>
+      <rect x="142" y="122" width="52" height="16" rx="8" fill="#142C45" />
+      <text x="168" y="133" text-anchor="middle" fill="#9BC6F5" font-size="9">远程密钥</text>
+
+      <!-- 解锁卡 -->
+      <rect x="14" y="158" width="224" height="156" rx="12" fill="#161C24" />
+      <rect x="26" y="172" width="200" height="34" rx="8" fill="#4BA8C4" />
+      <text x="126" y="193" text-anchor="middle" fill="#0E1218" font-size="12" font-weight="700">生物识别解锁</text>
+      <text x="26" y="226" fill="#A9BCCB" font-size="10" font-weight="600">主密码</text>
+      <rect x="26" y="233" width="200" height="30" rx="7" fill="#242E3B" stroke="#3B4D61" stroke-width="1" />
+      <text x="36" y="252" fill="#889BAE" font-size="10.5">可留空</text>
+      <rect x="26" y="273" width="200" height="28" rx="7" fill="#161C24" stroke="#3B4D61" stroke-width="1" />
+      <text x="126" y="291" text-anchor="middle" fill="#E8F4FA" font-size="11" font-weight="600">解锁</text>
+
+      <!-- 手势指示条 -->
+      <rect x="90" y="334" width="72" height="3.5" rx="1.75" fill="#324457" />
+    </g>
+    <text x="126" y="372" text-anchor="middle" fill="#7ACAE0" font-size="12" font-weight="600">1. 启动自动唤起默认库</text>
+  </g>
+
+  <!-- 手机 2：密码库列表 -->
+  <g transform="translate(328, 88)" font-family="system-ui, -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif">
+    <rect x="0" y="0" width="252" height="346" rx="28" fill="#0E1218" stroke="#354A60" stroke-width="2.5" />
+    <g clip-path="url(#phoneInnerClip)">
+      <!-- 顶栏（含挖孔安全区留白） -->
+      <rect x="0" y="0" width="252" height="68" fill="#161C24" />
+      <circle cx="126" cy="14" r="4.5" fill="#233142" />
+      <text x="16" y="45" fill="#F4FAFC" font-size="13.5" font-weight="700">Personal Vault</text>
+      <text x="16" y="60" fill="#8EA6B8" font-size="9.5">24 条 · KDBX 4.1</text>
+      <rect x="150" y="36" width="44" height="18" rx="9" fill="#12342A" />
+      <text x="172" y="48" text-anchor="middle" fill="#8EE3C3" font-size="9.5" font-weight="600">已同步</text>
+      <text x="234" y="49" text-anchor="end" fill="#5CC3DF" font-size="11" font-weight="600">锁定</text>
+
+      <!-- 搜索框与过滤芯片 -->
+      <rect x="14" y="78" width="224" height="30" rx="8" fill="#161C24" stroke="#263342" stroke-width="1" />
+      <text x="26" y="97" fill="#7B8FA1" font-size="11">搜索</text>
+
+      <rect x="14" y="116" width="62" height="22" rx="11" fill="#4BA8C4" />
+      <text x="45" y="130" text-anchor="middle" fill="#0E1218" font-size="9.5" font-weight="700">全部 (24)</text>
+      <rect x="82" y="116" width="42" height="22" rx="11" fill="#161C24" />
+      <text x="103" y="130" text-anchor="middle" fill="#B5C5D3" font-size="9.5">2FA</text>
+      <rect x="130" y="116" width="54" height="22" rx="11" fill="#161C24" />
+      <text x="157" y="130" text-anchor="middle" fill="#B5C5D3" font-size="9.5">工作 (9)</text>
+
+      <!-- 列表条目 -->
+      <rect x="14" y="148" width="224" height="48" rx="12" fill="#161C24" />
+      <rect x="24" y="158" width="28" height="28" rx="8" fill="#133341" />
+      <text x="38" y="177" text-anchor="middle" fill="#9EDDF0" font-size="12" font-weight="700">G</text>
+      <text x="60" y="170" fill="#F4FAFC" font-size="12" font-weight="600">GitHub</text>
+      <rect x="106" y="159" width="28" height="14" rx="7" fill="#142C45" />
+      <text x="120" y="169" text-anchor="middle" fill="#9BC6F5" font-size="8.5" font-weight="600">2FA</text>
+      <text x="60" y="185" fill="#9CB3C5" font-size="10">alice@example.com</text>
+      <rect x="192" y="160" width="38" height="24" rx="7" fill="#242E3B" />
+      <text x="211" y="176" text-anchor="middle" fill="#5CC3DF" font-size="9.5" font-weight="600">复制</text>
+
+      <rect x="14" y="204" width="224" height="48" rx="12" fill="#161C24" />
+      <rect x="24" y="214" width="28" height="28" rx="8" fill="#133341" />
+      <text x="38" y="233" text-anchor="middle" fill="#9EDDF0" font-size="12" font-weight="700">C</text>
+      <text x="60" y="226" fill="#F4FAFC" font-size="12" font-weight="600">Cloud Console</text>
+      <text x="60" y="241" fill="#9CB3C5" font-size="10">ops@company.example</text>
+      <rect x="192" y="216" width="38" height="24" rx="7" fill="#242E3B" />
+      <text x="211" y="232" text-anchor="middle" fill="#5CC3DF" font-size="9.5" font-weight="600">复制</text>
+
+      <!-- 底部三栏导航（贴合底边） -->
+      <rect x="0" y="294" width="252" height="52" fill="#161C24" />
+      <line x1="18" y1="295" x2="74" y2="295" stroke="#5CC3DF" stroke-width="2" />
+      <text x="46" y="317" text-anchor="middle" fill="#5CC3DF" font-size="10" font-weight="700">密码库</text>
+      <text x="126" y="317" text-anchor="middle" fill="#8EA6B8" font-size="10">生成器</text>
+      <text x="206" y="317" text-anchor="middle" fill="#8EA6B8" font-size="10">设置</text>
+      <rect x="90" y="334" width="72" height="3.5" rx="1.75" fill="#324457" />
+    </g>
+    <text x="126" y="372" text-anchor="middle" fill="#7ACAE0" font-size="12" font-weight="600">2. 摘要列表与快捷复制</text>
+  </g>
+
+  <!-- 手机 3：条目详情 + 实时 TOTP -->
+  <g transform="translate(618, 88)" font-family="system-ui, -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif">
+    <rect x="0" y="0" width="252" height="346" rx="28" fill="#0E1218" stroke="#354A60" stroke-width="2.5" />
+    <g clip-path="url(#phoneInnerClip)">
+      <rect x="0" y="0" width="252" height="68" fill="#161C24" />
+      <circle cx="126" cy="14" r="4.5" fill="#233142" />
+      <text x="16" y="50" fill="#5CC3DF" font-size="11" font-weight="600">返回</text>
+      <text x="56" y="45" fill="#F4FAFC" font-size="13.5" font-weight="700">GitHub</text>
+      <text x="56" y="59" fill="#8EA6B8" font-size="9.5">工作</text>
+      <rect x="192" y="34" width="44" height="24" rx="7" fill="#4BA8C4" />
+      <text x="214" y="50" text-anchor="middle" fill="#0E1218" font-size="10.5" font-weight="700">编辑</text>
+
+      <!-- TOTP 实时卡片 -->
+      <rect x="14" y="80" width="224" height="76" rx="12" fill="#161C24" />
+      <rect x="14" y="80" width="4" height="76" rx="2" fill="#4C95E6" />
+      <text x="28" y="99" fill="#8EA6B8" font-size="9.5" font-weight="600">TOTP · GitHub</text>
+      <text x="28" y="124" fill="#F4FAFC" font-family="monospace" font-size="20" font-weight="700" letter-spacing="2">482 917</text>
+      <rect x="180" y="96" width="46" height="28" rx="8" fill="#133341" />
+      <text x="203" y="114" text-anchor="middle" fill="#9EDDF0" font-size="10" font-weight="600">复制</text>
+      <rect x="28" y="136" width="198" height="5" rx="2.5" fill="#242E3B" />
+      <rect x="28" y="136" width="142" height="5" rx="2.5" fill="#4BA8C4" />
+      <text x="28" y="151" fill="#8EA6B8" font-size="9">21s</text>
+
+      <!-- 凭据卡片 -->
+      <rect x="14" y="168" width="224" height="146" rx="12" fill="#161C24" />
+      <text x="28" y="187" fill="#8EA6B8" font-size="9.5" font-weight="600">凭据</text>
+      <text x="28" y="206" fill="#8EA6B8" font-size="9">用户名</text>
+      <text x="28" y="222" fill="#F4FAFC" font-size="12">alice@example.com</text>
+      <line x1="28" y1="234" x2="224" y2="234" stroke="#242E3B" stroke-width="1" />
+      <text x="28" y="250" fill="#8EA6B8" font-size="9">密码</text>
+      <text x="176" y="250" fill="#5CC3DF" font-size="9.5" font-weight="600">显示  复制</text>
+      <text x="28" y="270" fill="#F4FAFC" font-family="monospace" font-size="13" letter-spacing="1.5">••••••••••••••••</text>
+      <!-- 5段强度条 -->
+      <rect x="28" y="284" width="36" height="4" rx="2" fill="#4CD4A3" />
+      <rect x="68" y="284" width="36" height="4" rx="2" fill="#4CD4A3" />
+      <rect x="108" y="284" width="36" height="4" rx="2" fill="#4CD4A3" />
+      <rect x="148" y="284" width="36" height="4" rx="2" fill="#4CD4A3" />
+      <rect x="188" y="284" width="36" height="4" rx="2" fill="#4CD4A3" />
+      <text x="28" y="302" fill="#4CD4A3" font-size="9.5" font-weight="600">强度：极强 (100/100)</text>
+
+      <rect x="90" y="334" width="72" height="3.5" rx="1.75" fill="#324457" />
+    </g>
+    <text x="126" y="372" text-anchor="middle" fill="#7ACAE0" font-size="12" font-weight="600">3. 实时 TOTP 与按需显密</text>
+  </g>
+
+  <!-- 手机 4：WebDAV 冲突显式保护 -->
+  <g transform="translate(908, 88)" font-family="system-ui, -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif">
+    <rect x="0" y="0" width="252" height="346" rx="28" fill="#0E1218" stroke="#354A60" stroke-width="2.5" />
+    <g clip-path="url(#phoneInnerClip)">
+      <rect x="0" y="0" width="252" height="68" fill="#161C24" />
+      <circle cx="126" cy="14" r="4.5" fill="#233142" />
+      <text x="16" y="45" fill="#F4FAFC" font-size="13.5" font-weight="700">同步冲突</text>
+      <text x="16" y="59" fill="#8EA6B8" font-size="9.5">Personal Vault</text>
+      <text x="234" y="49" text-anchor="end" fill="#5CC3DF" font-size="11" font-weight="600">关闭</text>
+
+      <rect x="14" y="80" width="224" height="48" rx="10" fill="#3B151B" />
+      <rect x="14" y="80" width="4" height="48" rx="2" fill="#F27882" />
+      <text x="28" y="99" fill="#F9BFC4" font-size="11" font-weight="700">双端均已修改</text>
+      <text x="28" y="116" fill="#F9BFC4" font-size="10">未自动覆盖，请选择处理策略</text>
+
+      <rect x="14" y="138" width="224" height="72" rx="12" fill="#161C24" />
+      <text x="26" y="156" fill="#8EA6B8" font-size="9.5" font-weight="600">版本摘要 (SHA-256)</text>
+      <text x="26" y="173" fill="#B5C5D3" font-size="9.5">本地 · 18.4 KB</text>
+      <text x="26" y="185" fill="#E8F4FA" font-family="monospace" font-size="9">9a4f1c8d72b3e5...</text>
+      <text x="26" y="200" fill="#B5C5D3" font-size="9.5">远端 · 18.9 KB · 3e7b90a1...</text>
+
+      <rect x="14" y="220" width="224" height="98" rx="12" fill="#161C24" />
+      <rect x="24" y="232" width="204" height="24" rx="7" fill="#4BA8C4" />
+      <text x="126" y="248" text-anchor="middle" fill="#0E1218" font-size="10" font-weight="700">另存本地副本并采用远端</text>
+      <rect x="24" y="262" width="204" height="22" rx="7" fill="#161C24" stroke="#3B4D61" stroke-width="1" />
+      <text x="126" y="277" text-anchor="middle" fill="#E8F4FA" font-size="10">采用远端（放弃本地）</text>
+      <rect x="24" y="290" width="204" height="22" rx="7" fill="#F27882" />
+      <text x="126" y="305" text-anchor="middle" fill="#0E1218" font-size="10" font-weight="700">覆盖远端（丢弃远端）</text>
+
+      <rect x="90" y="334" width="72" height="3.5" rx="1.75" fill="#324457" />
+    </g>
+    <text x="126" y="372" text-anchor="middle" fill="#7ACAE0" font-size="12" font-weight="600">4. 零静默覆盖冲突保护</text>
+  </g>
+</svg>
