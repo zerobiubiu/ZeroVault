@@ -1,0 +1,40 @@
+# 保护检索索引，绝不入库
+.markindex/
+
+# 依赖与构建产物
+node_modules/
+dist/
+coverage/
+*.tsbuildinfo
+
+# 禁止入库非 Bun 锁文件
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# 敏感数据：严禁真实密码库、密钥与环境配置入库
+*.kdbx
+*.key
+*.keyx
+.env
+.env.*
+*.jks
+*.keystore
+!android/app/debug.keystore
+
+# Android / Gradle 构建产物
+android/.gradle/
+android/build/
+android/app/build/
+android/app/.cxx/
+android/local.properties
+*.apk
+*.aab
+*.hprof
+
+# 编辑器与系统临时文件
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.log

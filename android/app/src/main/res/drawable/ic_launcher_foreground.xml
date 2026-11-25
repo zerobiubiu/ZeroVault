@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- 外层对称几何安全盾徽（严格位于 66dp 自适应安全圆内） -->
+    <path
+        android:fillColor="#F4FAFC"
+        android:pathData="M54,24 L76,33.2 C77.2,33.7 78,34.9 78,36.2 L78,53.5 C78,68.4 67.8,79.6 55.2,84.4 C54.4,84.7 53.6,84.7 52.8,84.4 C40.2,79.6 30,68.4 30,53.5 L30,36.2 C30,34.9 30.8,33.7 32,33.2 Z" />
+
+    <!-- 盾牌内侧金库凹槽 -->
+    <path
+        android:fillColor="#113A4D"
+        android:pathData="M54,30.2 L71.4,37.5 L71.4,53.2 C71.4,64.8 63.6,73.7 54,77.7 C44.4,73.7 36.6,64.8 36.6,53.2 L36.6,37.5 Z" />
+
+    <!-- 中央「Z」形金库锁栓 + 钥匙孔视觉锤 -->
+    <path
+        android:fillColor="#5CC3DF"
+        android:pathData="M43.5,42.5 L64.5,42.5 L64.5,47.5 L51.4,60.5 L64.5,60.5 L64.5,65.5 L43.5,65.5 L43.5,60.5 L56.6,47.5 L43.5,47.5 Z" />
+
+    <!-- 锁芯高光原点 -->
+    <path
+        android:fillColor="#F4FAFC"
+        android:pathData="M54,51.2 A2.8,2.8 0 1,1 53.99,51.2 Z" />
+</vector>

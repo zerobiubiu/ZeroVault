@@ -1,0 +1,54 @@
+{
+  "name": "zerovault",
+  "version": "0.1.3",
+  "license": "MIT",
+  "private": true,
+  "description": "ZeroVault — 基于 KDBX 的商业级 Android 密码管理器（React Native + Kotlin 原生安全模块）",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zerobiubiu/ZeroVault.git"
+  },
+  "homepage": "https://github.com/zerobiubiu/ZeroVault#readme",
+  "bugs": {
+    "url": "https://github.com/zerobiubiu/ZeroVault/issues"
+  },
+  "packageManager": "bun@1.4.5",
+  "engines": {
+    "node": ">= 22.11.0",
+    "bun": ">= 1.4.0"
+  },
+  "scripts": {
+    "start": "react-native start",
+    "android": "react-native run-android",
+    "check": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest run --config vitest.config.mts",
+    "test:watch": "vitest --config vitest.config.mts",
+    "tokens": "bun tools/generate-and-verify-tokens.mts",
+    "verify:version": "bun tools/verify-version.mts",
+    "verify:all": "bun run verify:version && bun run tokens && bun run check && bun run test"
+  },
+  "dependencies": {
+    "@noble/ciphers": "2.4.0",
+    "@noble/hashes": "2.4.0",
+    "@xmldom/xmldom": "0.9.12",
+    "pako": "3.0.3",
+    "react": "19.3.0",
+    "react-native": "0.88.1",
+    "react-native-safe-area-context": "5.11.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.3",
+    "@babel/runtime": "^7.25.0",
+    "@react-native-community/cli": "20.2.0",
+    "@react-native-community/cli-platform-android": "20.2.0",
+    "@react-native/babel-preset": "0.88.1",
+    "@react-native/metro-config": "0.88.1",
+    "@react-native/typescript-config": "0.88.1",
+    "@types/node": "^22.15.0",
+    "@types/pako": "^2.0.3",
+    "@types/react": "^19.2.0",
+    "typescript": "6.0.3",
+    "vitest": "5.1.1"
+  }
+}

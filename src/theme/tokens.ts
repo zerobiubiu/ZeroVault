@@ -1,0 +1,224 @@
+/**
+ * 本文件由 tools/generate-and-verify-tokens.mts 自动生成，事实来源为根 design-tokens.json。
+ * 业务组件禁止直接使用 primitives 颜色，仅允许消费 ThemeColors 语义令牌。
+ */
+
+export const primitiveTokens = {
+  "color": {
+    "primary": {
+      "50": "#f5fcfe",
+      "100": "#edfafc",
+      "200": "#a9e4ef",
+      "300": "#6ac8df",
+      "400": "#31a6c7",
+      "500": "#1d6f8a",
+      "600": "#195b7b",
+      "700": "#15486c",
+      "800": "#11375d",
+      "900": "#0e294e",
+      "950": "#081931"
+    },
+    "neutral": {
+      "50": "#f9fafb",
+      "100": "#f1f3f6",
+      "200": "#e1e5ea",
+      "300": "#c7cdd6",
+      "400": "#96a1b0",
+      "500": "#6a778a",
+      "600": "#505c6d",
+      "700": "#394351",
+      "800": "#252c37",
+      "850": "#1d232d",
+      "900": "#161c24",
+      "950": "#0e1218"
+    },
+    "success": {
+      "50": "#f2fefb",
+      "100": "#e8fcf8",
+      "200": "#a1f0dd",
+      "300": "#5de0bc",
+      "400": "#28c191",
+      "500": "#16805a",
+      "600": "#13744a",
+      "700": "#11683c",
+      "800": "#0e5c2f",
+      "900": "#0c5024",
+      "950": "#073216"
+    },
+    "warning": {
+      "50": "#fffcf4",
+      "100": "#fef9eb",
+      "200": "#fbe1a7",
+      "300": "#f8c162",
+      "400": "#f19922",
+      "500": "#c26a0a",
+      "600": "#ab5307",
+      "700": "#933f06",
+      "800": "#7a2e05",
+      "900": "#621f04",
+      "950": "#3d1303"
+    },
+    "danger": {
+      "50": "#fef5f9",
+      "100": "#fdedf3",
+      "200": "#f5b6ce",
+      "300": "#eb82a0",
+      "400": "#de5069",
+      "500": "#c82834",
+      "600": "#ad202a",
+      "700": "#921920",
+      "800": "#761217",
+      "900": "#590d10",
+      "950": "#380709"
+    },
+    "info": {
+      "50": "#f5fbfe",
+      "100": "#edf8fc",
+      "200": "#b1dbf2",
+      "300": "#78b8e4",
+      "400": "#418fd3",
+      "500": "#2563a8",
+      "600": "#1f5094",
+      "700": "#193f80",
+      "800": "#14306c",
+      "900": "#0f2257",
+      "950": "#091537"
+    },
+    "white": "#ffffff"
+  },
+  "fontSize": {
+    "xs": 12,
+    "sm": 14,
+    "base": 16,
+    "lg": 18,
+    "xl": 20,
+    "2xl": 24,
+    "3xl": 30
+  },
+  "fontWeight": {
+    "regular": "400",
+    "semibold": "600"
+  },
+  "lineHeight": {
+    "tight": 1.25,
+    "normal": 1.5,
+    "relaxed": 1.75
+  },
+  "spacing": {
+    "1": 4,
+    "2": 8,
+    "3": 12,
+    "4": 16,
+    "6": 24,
+    "8": 32,
+    "12": 48,
+    "16": 64
+  },
+  "radius": {
+    "sm": 6,
+    "md": 10,
+    "lg": 16,
+    "xl": 20,
+    "full": 999
+  },
+  "borderWidth": {
+    "hairline": 1,
+    "emphasis": 2
+  },
+  "opacity": {
+    "disabled": 0.45,
+    "pressed": 0.82,
+    "scrim": 0.56
+  },
+  "elevation": {
+    "none": 0,
+    "xs": 1,
+    "sm": 3,
+    "md": 6,
+    "lg": 12,
+    "xl": 20
+  },
+  "zIndex": {
+    "base": 0,
+    "dropdown": 10,
+    "sticky": 20,
+    "overlay": 30,
+    "modal": 40,
+    "popover": 50,
+    "toast": 60
+  }
+} as const;
+
+export const lightColors = {
+  "background": "#f9fafb",
+  "surface": "#ffffff",
+  "surfaceRaised": "#ffffff",
+  "surfaceSunken": "#f1f3f6",
+  "text": "#0e1218",
+  "textSecondary": "#394351",
+  "textMuted": "#505c6d",
+  "border": "#e1e5ea",
+  "borderStrong": "#c7cdd6",
+  "action": "#195b7b",
+  "actionPressed": "#15486c",
+  "actionText": "#ffffff",
+  "actionSubtle": "#edfafc",
+  "actionSubtleText": "#0e294e",
+  "success": "#11683c",
+  "successSubtle": "#e8fcf8",
+  "successSubtleText": "#0c5024",
+  "warning": "#933f06",
+  "warningSubtle": "#fef9eb",
+  "warningSubtleText": "#621f04",
+  "danger": "#ad202a",
+  "dangerText": "#ffffff",
+  "dangerSubtle": "#fdedf3",
+  "dangerSubtleText": "#590d10",
+  "info": "#193f80",
+  "infoSubtle": "#edf8fc",
+  "infoSubtleText": "#0f2257",
+  "focusRing": "#1d6f8a",
+  "tabBarBg": "#ffffff",
+  "tabActive": "#195b7b",
+  "tabInactive": "#505c6d"
+} as const;
+
+export const darkColors = {
+  "background": "#0e1218",
+  "surface": "#161c24",
+  "surfaceRaised": "#1d232d",
+  "surfaceSunken": "#252c37",
+  "text": "#f9fafb",
+  "textSecondary": "#e1e5ea",
+  "textMuted": "#c7cdd6",
+  "border": "#252c37",
+  "borderStrong": "#394351",
+  "action": "#31a6c7",
+  "actionPressed": "#6ac8df",
+  "actionText": "#0e1218",
+  "actionSubtle": "#081931",
+  "actionSubtleText": "#a9e4ef",
+  "success": "#5de0bc",
+  "successSubtle": "#073216",
+  "successSubtleText": "#a1f0dd",
+  "warning": "#f8c162",
+  "warningSubtle": "#3d1303",
+  "warningSubtleText": "#fbe1a7",
+  "danger": "#eb82a0",
+  "dangerText": "#0e1218",
+  "dangerSubtle": "#380709",
+  "dangerSubtleText": "#f5b6ce",
+  "info": "#78b8e4",
+  "infoSubtle": "#091537",
+  "infoSubtleText": "#b1dbf2",
+  "focusRing": "#6ac8df",
+  "tabBarBg": "#161c24",
+  "tabActive": "#6ac8df",
+  "tabInactive": "#c7cdd6"
+} as const;
+
+export type ThemeColors = {
+  readonly [K in keyof typeof lightColors]: string;
+};
+
+export type ThemeMode = 'system' | 'light' | 'dark';
