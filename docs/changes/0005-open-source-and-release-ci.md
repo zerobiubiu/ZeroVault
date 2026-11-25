@@ -22,4 +22,13 @@
 
 ## 3. 执行验证记录
 
-- （将于本地校验与 GitHub Actions `v0.1.3` 首个 Release 工作流真实跑完后回填最终运行链接与结果。）
+- **执行环境**：Windows 本地（`gh` CLI 登录 `zerobiubiu`，Bun `1.4.5`）+ GitHub Actions `ubuntu-latest` 云端 Runner（Node 22、Bun `1.4.5`、Temurin Java 21、Android SDK `platforms;android-37.0` / `build-tools;37.0.0` / `ndk;27.1.12297006`）。
+- **验证命令与实际输出**：
+  1. 本地门禁与暂存区安全审计：`bun run verify:all`（版本 `0.1.3`、42 组设计令牌对比度、TypeScript、Vitest 24/24）全部通过；确认暂存区不含 `.markindex/`、APK、构建产物或真实密钥，`android/gradlew` 权限为 `100755`。
+  2. 公开仓库与标签推送：创建 `https://github.com/zerobiubiu/ZeroVault`（Public，MIT License），推送 `main` 与注释标签 `v0.1.3`。
+  3. GitHub Actions `CI`（Run `#45629174995`）：`completed / success`，耗时 `16s`。
+  4. GitHub Actions `Release Android APK`（Run `#45629177920`）：`completed / success`，耗时 `6m22s`，自动发布 `https://github.com/zerobiubiu/ZeroVault/releases/tag/v0.1.3`，上传附件：
+     - `ZeroVault-v0.1.3-android.apk`（`59,201,545` 字节，`sha256:f3841f04b6f1e328695ab500431ab280b534c4dabf4b1a599bef1058d20540c3`）
+     - `SHA256SUMS.txt`（`95` 字节）
+- **验证结论**：通过，开源发布、CI 门禁与自动构建发布 APK 全链路云端实测通过。
+- **已知限制**：仓库尚未配置正式发布签名 Secrets（`ANDROID_KEYSTORE_*`），当前 `v0.1.3` Release APK 使用开发签名回退并在 Release Notes 中已明确标注；配置 4 个 Secrets 后后续发版将自动启用正式证书签名。
